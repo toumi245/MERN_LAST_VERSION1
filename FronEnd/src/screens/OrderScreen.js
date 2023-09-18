@@ -1,7 +1,7 @@
 import React ,{ useEffect ,useState} from 'react'
 import {Link, useNavigate, useParams}from 'react-router-dom'
 import axios from 'axios'
-import {PayPalButton}from 'react-paypal-button-v2'
+// import {PayPalButton}from 'react-paypal-button-v2'
 import { Button,Row,Col,ListGroup,Image,Card } from 'react-bootstrap'
 import { useDispatch,useSelector } from 'react-redux'
 import Message from '../components/Message'
@@ -170,10 +170,10 @@ const successPaymentHandler=(paymentResult)=>{
                         <ListGroup.Item>
                         <Row>
                         {loadingPay && <Loader/>}
-                        {!sdkReady ? (
+                        {/* {!sdkReady ? (
                             <Loader/>
                         ):(<PayPalButton amount={order.totalPrice}
-                        onSuccess={successPaymentHandler}/>)}
+                        onSuccess={successPaymentHandler}/>)} */}
                         </Row>
                     </ListGroup.Item>
                     )}
